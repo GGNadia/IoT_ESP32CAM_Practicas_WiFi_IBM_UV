@@ -1,0 +1,135 @@
+<html>
+        <head>
+            <title>Lector de temperatura y humedad
+            </title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="icon" href="data:,">
+            <style>
+                meter {
+                    -webkit-writing-mode: horizontal-tb !important;
+                    appearance: auto;
+                    box-sizing: border-box;
+                    display: inline-block;
+                    height: 3em;
+                    width: 13em;
+                    vertical-align: -1.0em;
+                    -webkit-user-modify: read-only !important;
+                }
+        
+                html {
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;;
+                    display: inline-block;
+                    margin: 0px auto;
+                    text-align: center;
+                    background-color: #fcfaf2;
+                }
+                
+                .caja{
+                width: 80%; 
+                margin: 0 auto; 
+                padding: auto;
+                box-sizing: border-box; 
+                display: flex; 
+                justify-content: center;
+                align-items: center; 
+                flex-direction: column;
+                }
+
+                h1 {
+                    color: black;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    text-align: center;
+                    padding: 2vh;
+                }
+
+                h4 {
+                    color: black;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                    line-height: 0;
+                    text-align: center;
+                }
+        
+                p {
+                    font-size: 1.5rem;
+                }
+        
+                table {
+                    margin: auto;
+                }
+        
+                td {
+                    padding: 7px;           
+                }
+        
+                .Button {
+                    border-radius: 31px;
+                    display: inline-block;
+                    cursor: pointer;
+                    color: #ffffff;
+                    font-family: Arial;
+                    font-size: 10px;
+                    font-weight: bold;
+                    font-style: italic;
+                    padding: 4px 5px;
+                    text-decoration: none;
+                }
+        
+                .ButtonR {
+                    background-color: #D7F9BF;
+                    border: 3px solid #7CA75D;
+                    text-shadow: 0px 2px 2px #3F6324;
+                }
+        
+                .ButtonR:hover {
+                    background-color: #508D23;
+                }
+        
+                .Button:active {
+                    position: relative;
+                    top: 1px;
+                }
+            </style>
+        </head>
+        
+        <body>
+            <div class="caja">
+                <img src="Images/uv_logo.png" style=" height:130px; width:130px; top: 0; left: 0; position: absolute;"/>
+                <h1> Facultad de Instrumentación electrónica</h1>
+                <h4> Ingeniería Biomédica</h4>
+                <h4> TSIB: Internet de las Cosas</h4>
+                <img src="Images/fie_logo.png" style="height:100px; width:60px; top: 0; right: 0; position: absolute;"/>
+            </div>
+            <div style="height: 50;"></div>
+            <div class="caja">
+                <h1>ESP Web Server</h1>
+            </div>
+        
+        
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <p><a href="/update"><button class="ButtonR Button">Actualizar</button></a></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong> """+ t_value +""" °C</strong>
+                            <meter id="fuel" min="0" max="100" low="30" high="70" optimum="80" value=" @@"""+ t_value +""" @@">
+                                at 50/100
+                            </meter>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong> """+ h_value +""" %</strong>
+                            <meter id="fuel" min="0" max="100" low="30" high="70" optimum="80" value=" @@"""+ h_value +""" @@">
+                                at 50/100
+                            </meter>
+                        </td>
+                    </tr>
+                    <tr>
+                </tbody>
+            </table>
+        </body>
+    </html>
