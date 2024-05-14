@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Botón 1 </title>
+        <style>
+            h1 {
+            color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            }
+
+            h4 {
+            color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            line-height: 0;
+            text-align: center;
+            }
+
+            body{
+                background-color: #fcfaf2;
+            }
+
+            .caja{
+                width: 80%; 
+                margin: 0 auto; 
+                padding: auto;
+                box-sizing: border-box; 
+                display: flex; 
+                justify-content: center;
+                align-items: center; 
+                flex-direction: column;
+            }
+            .contenedor-botones {
+                display: flex;
+                justify-content: center; 
+            }
+            .contenedor-botones button {
+                margin: 0 10px; 
+            }
+        </style>
+        
+    </head>
+    <body>
+        <div>
+            <div class="caja">
+                <img src="Images/uv_logo.png" style=" height:130px; width:130px; top: 0; left: 0; position: absolute;"/>
+                <h4> Facultad de Instrumentación electrónica</h4>
+                <h4> Ingeniería Biomédica</h4>
+                <h4> TSIB: Internet de las Cosas</h4>
+                <img src="Images/fie_logo.png" style="height:100px; width:60px; top: 0; right: 0; position: absolute;"/>
+            </div>
+            <div style="height: 50;"></div>
+            <div class="caja">
+                <h1>ESP Web Server</h1>
+            </div>
+            <div class="contenedor-botones">
+                <a href=\"?led=on\"><button >ON</button></a>&nbsp;
+                <a href=\"?led=off\"><button>OFF</button></a>
+            </div>
+            
+        </div>
+    </body>
+</html>
